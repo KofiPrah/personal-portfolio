@@ -33,12 +33,12 @@ html {
 
 .intro-title {
     font-family: sans-serif;
-    font-size: 48px;
+    font-size: 46px;
 }
 
 .intro-roles {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 36px;
+    font-size: 30px;
 }
 
 .overlay {
@@ -138,4 +138,16 @@ html {
     h1 {
         text-align: center;
     }
+}
+
+.company-description {
+    display: block;
+    inline-size: 900px;
+    overflow-wrap: break-word;
+}
+
+.my-bio {
+    display: block;
+    inline-size: 550px;
+    overflow-wrap: break-word;
 }
