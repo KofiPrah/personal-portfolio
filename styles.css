@@ -1,20 +1,25 @@
-html {
-    background: beige;
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+
+
 .header-right-cluster {
-    position: relative;
     display: flex;
     justify-content: right;
     cursor: pointer;
     flex-wrap: wrap;
+
+
 }
 
 #menu-icon {
     cursor: pointer;
     margin-top: 5%;
     margin-right: 10%;
+
 }
 
 
@@ -27,19 +32,25 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 80vh;
+
 
 }
 
 .intro-title {
     font-family: sans-serif;
-    font-size: 46px;
+    font-size: 1cm;
+
+
 }
 
 .intro-roles {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-size: 1.5rem;
+    padding-top: 0;
+
 }
+
 
 .overlay {
     height: 0;
@@ -48,8 +59,8 @@ html {
     z-index: 1;
     left: 0;
     top: 0;
-    background-color: black;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgb(75, 73, 73);
+    background-color: rgba(0, 0, 0, 0.6);
     overflow-x: hidden;
     transition: 0.5s;
     flex-direction: column;
@@ -62,6 +73,7 @@ html {
     text-align: center;
     margin-top: 10px;
     font-family: sans-serif;
+
 
 
 }
@@ -110,6 +122,7 @@ html {
     font-size: 24px;
 
 
+
     h1 {
         text-align: center;
     }
@@ -124,6 +137,7 @@ html {
     height: 50vh;
     font-size: 24px;
 
+
 }
 
 .about-container {
@@ -134,6 +148,7 @@ html {
     align-items: center;
     height: 50vh;
     font-size: 24px;
+
 
     h1 {
         text-align: center;
@@ -150,4 +165,166 @@ html {
     display: block;
     inline-size: 550px;
     overflow-wrap: break-word;
+}
+
+:root {
+    --color-bg1: rgb(242, 235, 245);
+    --color-bg2: rgb(106, 122, 189);
+    --color1: 18, 113, 255;
+    --color2: 213, 53, 99;
+    --color3: 100, 203, 190;
+    --color4: 73, 153, 222;
+    --color5: 205, 56, 255;
+    --color-interactive: 140, 100, 255;
+    --circle-size: 70%;
+    --blending: hard-light;
+
+}
+
+@keyframes moveInCircle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveVertical {
+    0% {
+        transform: translateY(-50%);
+    }
+
+    50% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes moveHorizontal {
+    0% {
+        transform: translateX(-50%) translateY(-10%);
+    }
+
+    50% {
+        transform: translateX(50%) translateY(10%);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-10%);
+    }
+}
+
+
+.gradient-bg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+    background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+
+.gradients-container {
+    filter: url(#goo) blur(5px);
+    width: 100%;
+    height: 100%;
+}
+
+.g1 {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color1), 0.8)0, rgba(var(--color1), 0)50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size)/2 + 200);
+    left: calc(50% - var(--circle-size)/2);
+
+    transform-origin: center center;
+    animation: moveVertical 30s ease infinite;
+
+    opacity: 1;
+
+}
+
+.g2 {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color2), 0.8)0, rgba(var(--color2), 0)50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size)/2 - 200);
+    left: calc(50% - var(--circle-size)/2);
+
+    transform-origin: calc(50% - 400px);
+    animation: moveInCircle 20s reverse infinite;
+
+    opacity: 1;
+
+}
+
+.g3 {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color3), 0.8)0, rgba(var(--color3), 0)50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size)/2 + 200px);
+    left: calc(50% - var(--circle-size)/2 - 500px);
+    opacity: 1;
+
+    transform-origin: calc(50% + 400px);
+    animation: moveInCircle 40s linear infinite;
+}
+
+.g4 {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color4), 0.8)0, rgba(var(--color4), 0)50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    width: calc(var(--circle-size) * 2);
+    height: calc(var(--circle-size) * 2);
+    top: calc(50% - var(--circle-size)/2 - 100px);
+    left: calc(50% - var(--circle-size)/2 + 200px);
+    opacity: 1;
+
+    transform-origin: calc(50% + 200px);
+    animation: moveHorizontal 40s ease infinite;
+}
+
+.g5 {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color5), 0.8)0, rgba(var(--color5), 0)50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size)/2 - 200);
+    left: calc(50% - var(--circle-size)/2 + 200);
+
+    transform-origin: calc(50% -800px) calc(50% + 200px);
+    animation: moveInCircle 20s ease infinite;
+
+    opacity: 1;
+}
+
+.interactive {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0)50%)no-repeat;
+    mix-blend-mode: var(--blending);
+
+    width: 100%;
+    height: 100%;
+    top: -50%;
+    left: -50%;
+
+    opacity: 0.7;
 }

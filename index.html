@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +8,7 @@
 </head>
 
 <body>
-    <div class="header">
+    <header>
         <div class="header-right-cluster">
             <span id="menu-icon" title="Menu" onclick="openNav()">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" class="icons-style">
@@ -42,65 +41,83 @@
                         style="transform: translateX(0px) translateY(-16.97px); transform-origin: 0px 0px;"></rect>
                 </svg>
             </span>
-
         </div>
+    </header>
 
 
-        <div id="myNav" class="overlay">
+    <div id="myNav" class="overlay">
 
-            <a id="close-menu-icon" href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times;</a>
+        <a id="close-menu-icon" href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times;</a>
 
-            <div class="overlay-content">
-                <nav>
-                    <div class="item-inner">
-                        <a href="index.html">
-                            <h1>Home</h1>
-                        </a>
-                    </div>
-                    <div class="item-inner">
-                        <a href="Pages/experience.html">
-                            <h1>Experience</h1>
-                        </a>
-                    </div>
-                    <div class="item-inner">
-                        <a href="Pages/about.html">
-                            <h1>About</h1>
-                        </a>
-                    </div>
-                    <div class="item-inner">
-                        <a href="Pages/contact.html">
-                            <h1>Contact</h1>
-                        </a>
-                    </div>
-
-                </nav>
+        <div class="overlay-content">
+            <nav>
                 <div class="item-inner">
-                    <div class="link-wrapper">
-                        <div class="link"><a href="https://www.instagram.com/kofi.dp/">
-                                ↗ Instagram
-                            </a></div>
-                    </div>
+                    <a href="index.html">
+                        <h1>Home</h1>
+                    </a>
                 </div>
                 <div class="item-inner">
-                    <div class="link-wrapper">
-                        <div class="link"><a href="https://www.behance.net/kofiprah2">
-                                ↗ Behance
-                            </a></div>
-                    </div>
+                    <a href="Pages/experience.html">
+                        <h1>Experience</h1>
+                    </a>
+                </div>
+                <div class="item-inner">
+                    <a href="Pages/about.html">
+                        <h1>About</h1>
+                    </a>
+                </div>
+                <div class="item-inner">
+                    <a href="Pages/contact.html">
+                        <h1>Contact</h1>
+                    </a>
+                </div>
+
+            </nav>
+            <div class="item-inner">
+                <div class="link-wrapper">
+                    <div class="link"><a href="https://www.instagram.com/kofi.dp/">
+                            ↗ Instagram
+                        </a></div>
+                </div>
+            </div>
+            <div class="item-inner">
+                <div class="link-wrapper">
+                    <div class="link"><a href="https://www.behance.net/kofiprah2">
+                            ↗ Behance
+                        </a></div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="home">
-            <div class="home-intro-wrapper">
-                <div class="intro-title">
-                    <h1>Hey, I'm Kofi</h1>
-                </div>
-                <div class="intro-roles">
-                    <h2 class="role">I am a Web Developer and Designer.</h2>
-                    <hr />
-                </div>
+    <div class="home">
+        <div class="home-intro-wrapper">
+            <div class="intro-title">
+                <h3>Hey, I'm Kofi</h3>
             </div>
+            <div class="intro-roles">
+                <p class="role">I am a web developer & designer.</p>
+            </div>
+        </div>
+    </div>
+    <div class="gradient-bg">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                        result="goo" />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+            </defs>
+        </svg>
+        <div class="gradients-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="g4"></div>
+            <div class="g5"></div>
+            <div class="interactive"></div>
         </div>
     </div>
     <script src="js/app.js"></script>
